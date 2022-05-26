@@ -1,0 +1,48 @@
+.basestylesinput {
+  background-color: none;
+  outline: none;
+  color: rgb(63, 63, 63);
+  outline: 2px solid lightgrey;
+  transition: all 0.2s;
+  font-size: 1.5rem;
+}
+
+.basestylesinput:focus {
+  outline-color: var(--baseorange);
+  border: 2px solid lightblue;
+}
+
+#dropdown {
+  margin-right: 15px;
+}
+
+.searchboxwrapper {
+  float: right;
+  margin: none;
+  position: relative;
+  margin-top: 30px;
+}
+
+.searchbutton {
+  outline: none;
+  border: none;
+  background-color: var(--baseorange);
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  position: absolute;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.cancelbutton {
+  top: 45%;
+  position: absolute;
+  outline: none;
+  border: none;
+  right: 10px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+}

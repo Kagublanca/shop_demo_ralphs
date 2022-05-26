@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
+
+.content {
+  padding: 10px 150px 10px 150px;
+}
+
+.shopcontent {
+  display: grid;
+  grid-template-columns: 200px 200px 200px 200px;
+  gap: 20px;
+}
+
+.shopwrapper {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  background-color: rgb(224, 224, 224);
+}
+
+.resulttext {
+  background-color: rgb(233, 233, 233);
+  font-family: "Work Sans", sans-serif;
+}

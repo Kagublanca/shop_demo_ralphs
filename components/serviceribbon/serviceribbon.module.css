@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Pangolin&display=swap");
+
+.ribbonitem {
+  color: rgb(255, 126, 75);
+  margin: 15px;
+  transition: all 0.3s;
+  font-family: "Pangolin", cursive;
+  font-size: 1.3rem;
+}
+
+.ribbonwrapper {
+  display: flex;
+  position: relative;
+}
+
+.ribbonwrapper::after {
+  content: "";
+  background-color: #e2e2e2;
+  position: absolute;
+  padding: 2px;
+  width: 100%;
+  top: 50px;
+}
+
+.ribbonitem:hover {
+  color: rgb(172, 63, 20);
+
+  text-decoration: underline solid 3px;
+  cursor: pointer;
+}

@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pangolin&display=swap");
+
+.cardwrapper {
+  outline: 2px solid rgb(155, 155, 155);
+  width: 200px;
+  position: relative;
+  background-color: rgb(245, 245, 245);
+  height: 400px;
+}
+
+.image {
+  position: absolute;
+  left: 25%;
+  padding-top: 10px;
+}
+
+.review {
+  font-family: "Pangolin", cursive;
+  font-size: 1.2rem;
+}
+
+.textwrapper {
+  height: 200px;
+  padding-top: 50%;
+  padding-left: 10px;
+}
+
+.price {
+  font-size: 2rem;
+  text-align: center;
+  color: rgb(53, 53, 53);
+}
+
+.addbutton {
+  background-color: var(--baseorange);
+  outline: none;
+  border: none;
+  border-radius: 25% 25%;
+  width: 100px;
+  color: white;
+  font-size: 2rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.quantity {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 20px;
+}
+
+.input {
+  margin: none;
+  font-size: 1.5rem;
+}
+
+.input::-webkit-outer-spin-button,
+.input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.input[type="number"] {
+  -moz-appearance: textfield;
+}

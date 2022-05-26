@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pangolin&display=swap");
+
+.text {
+  text-align: center;
+}
+
+.cardwrapper {
+  display: flex;
+  justify-content: center;
+  gap: 150px;
+}
+
+#header {
+  font-family: "Gloria Hallelujah", cursive;
+  font-size: 3rem;
+  color: rgb(85, 85, 85);
+  margin: 0;
+  margin-top: 30px;
+  animation: headeranimation 3s forwards;
+}
+
+#subtext {
+  font-family: "Pangolin", cursive;
+  font-size: 1.5rem;
+  color: rgb(99, 99, 99);
+}
+
+@keyframes headeranimation {
+  from {
+    transform: translateY(-50%);
+    opacity: 0%;
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 100%;
+  }
+}

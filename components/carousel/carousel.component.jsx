@@ -1,6 +1,5 @@
 import styles from "./carousel.module.css";
 import { useState, useEffect } from "react";
-import Image from "next/image";
 import CarouselSlide from "./_partials/carouselslide/carouselslide.component";
 
 function Carousel() {
@@ -8,27 +7,27 @@ function Carousel() {
   const [slide, setSlide] = useState("slideone");
   const [pause, setPause] = useState(false);
 
+  //This interval starts the carousel autoplay.
   const sliderAnimation = setInterval(() => {
     if (!pause) {
       handleClick("right");
     }
   }, 5000);
 
+  //Every 'click' changes the carousel id to a different 'slide'.
   function handleClick(direction) {
-    if (direction == "right" && !pause) {
+    clearInterval(sliderAnimation);
+    if (direction == "right") {
       switch (slide) {
         case "slideone":
-          clearInterval(sliderAnimation);
           return setSlide("slidetwo");
         case "slidetwo":
-          clearInterval(sliderAnimation);
           return setSlide("slidethree");
         case "slidethree":
-          clearInterval(sliderAnimation);
           return setSlide("slideone");
       }
     }
-    if (direction == "left" && !pause) {
+    if (direction == "left") {
       switch (slide) {
         case "slideone":
           return setSlide("slidethree");

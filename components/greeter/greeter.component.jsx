@@ -4,6 +4,9 @@ import styles from "./greeter.module.css";
 function Greeter() {
   const [greeting, setGreeting] = useState("");
 
+  //Get the date in hours for the greeter. Simple logic then ensures the correct
+  //'greeting' is displayed.
+
   useEffect(() => {
     const date = new Date();
     const hour = date.getHours();
@@ -14,7 +17,7 @@ function Greeter() {
     if (hour >= 12 && hour < 18) {
       return setGreeting("Good Afternoon");
     }
-    if (hour >= 18) {
+    if (hour >= 18 || hour < 6) {
       return setGreeting("Good Evening");
     }
   }, []);

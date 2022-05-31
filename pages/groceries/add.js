@@ -1,13 +1,7 @@
 import { useState } from "react";
 
+//To add a product on the front-end.
 function Add() {
-  const [itemName, setItemName] = useState("initialState");
-  const [image, setImage] = useState("initialState");
-  const [price, setPrice] = useState("initialState");
-  const [description, setDescription] = useState("initialState");
-  const [information, setInformation] = useState("initialState");
-  const [rating, setRating] = useState("initialState");
-
   async function postItem() {
     const post = await fetch(
       "https://shop-demo-ralphs.herokuapp.com/stock/add",
@@ -15,11 +9,11 @@ function Add() {
         method: "POST",
         mode: "cors",
         body: JSON.stringify({
-          name: "sd",
-          image: "sds",
+          name: "Apple",
+          image: "test",
           price: 2,
-          description: "Cool",
-          information: "sdsd",
+          description: "Nice apple",
+          information: "This is a really good apple",
           rating: 3,
         }),
         headers: {
@@ -35,7 +29,7 @@ function Add() {
   return (
     <div>
       <h1>This is a place where you can add things</h1>
-      <button onClick={postItem}>Click here to add somethign</button>
+      <button onClick={postItem}>Click here to add something</button>
     </div>
   );
 }

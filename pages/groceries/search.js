@@ -1,13 +1,10 @@
 import { useState, useEffect } from "react";
-import Link from "next/link";
 import styles from "../../styles/Search.module.css";
 import ProductCard from "../../components/productcard/productcard";
 import ShoppingList from "../../components/shoppinglist/shoppingllist";
-import { useContext } from "react";
-import { UserContext } from "../../utils/userContext";
 
 export default function Search() {
-  const { user, setUser } = useContext(UserContext);
+  //Fetch whatever the user typed in the 'search' box.
   const params = new URLSearchParams(window.location.search);
   const query = params.get("query");
 
@@ -25,10 +22,12 @@ export default function Search() {
     setDisplayResults(data.payload);
   }
 
+  //Sets the state 'Search result' to whatever the user typed, as soon as the page is loaded.
   useEffect(() => {
     setSearchResult(query);
   }, [, query]);
 
+  //Fetch the result using the stock/ID endpoint.
   useEffect(() => {
     getResults();
     // eslint-disable-next-line

@@ -2,7 +2,6 @@ import styles from "./seasonalribbon.module.css";
 import SeasonalCard from "./_partials/seasonalcard.component";
 import { useEffect, useState } from "react";
 
-
 function SeasonalRibbon() {
   const initialState = [
     {
@@ -24,6 +23,7 @@ function SeasonalRibbon() {
   ];
   const [seasonalPromotions, setSeasonalPromotions] = useState(initialState);
 
+  //Get all of the seasonal promotions from the backend
   async function fetchPromotions() {
     const response = await fetch(
       "https://shop-demo-ralphs.herokuapp.com/seasonal"

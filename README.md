@@ -22,7 +22,7 @@ Currently the project only has very limited functionality. You can search for a 
 
 ### Known Bugs
 
-I do not think there are any 'bugs' at current. Just a lot of work to be done to make this into a fully completed project!
+At present, the searchbox can act strange if you type a two worded item. The only item currently able to do this is "mallet hammer". On next on to-do list. 
 
 ------------
 
